@@ -28,8 +28,8 @@ def file_analysis(destination):
             words.update(words_list)
     # print()
 
-    data = {"path": destination, "chars" : n_chars, "words" : n_words, "lines" : n_line, "char" : chars.most_common()[0],
-     "word" : words.most_common()[0]}
+    data = {"path": destination, "chars" : n_chars, "words" : n_words, "lines" : n_line, "char" : chars.most_common()[0]
+        ,"word" : words.most_common()[0]}
 
     return json.dumps(data)
     # return destination

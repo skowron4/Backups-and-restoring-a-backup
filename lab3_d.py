@@ -21,8 +21,6 @@ def aggregate_stats(files_stats):
     lines_count = 0
     common_char = Counter()
     common_word = Counter()
-    print(files_stats[0]['word'])
-    print('powyzej')
     for fs in files_stats:
         chars_count += fs['chars']
         words_count += fs['words']
@@ -31,12 +29,12 @@ def aggregate_stats(files_stats):
         common_word.update({fs['word'][0]:fs['word'][1]})
 
     return {
-        "Liczba przeczytanych plików":len(files_stats),
-        "Sumaryczna liczba zanków":chars_count,
-        "Sumaryczna liczba slow":words_count,
-        "Sumaryczna liczba wierszy":lines_count,
-        "Najczesciej wystepujacy znak":common_char.most_common()[0],
-        "Najczesciej wystepujace slowo":common_word.most_common()[0]
+        "Number of read files":len(files_stats),
+        "Number of characters":chars_count,
+        "Number of words":words_count,
+        "Number of lines":lines_count,
+        "The most common character":common_char.most_common()[0],
+        "The most common word":common_word.most_common()[0]
     }
 
 def file_processing():

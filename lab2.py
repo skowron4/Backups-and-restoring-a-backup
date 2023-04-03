@@ -20,7 +20,7 @@ def show_files():
             print()
 
         else:
-            print("Podany argument nie jest katalogiem")
+            print("The arguemnt is not a directory!")
     else:
         paths = path.split(os.pathsep)
         print("zad 2 a --------------------------------")

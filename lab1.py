@@ -1,8 +1,7 @@
 import sys
 from os import environ
 
-
-def show_Environment_Variables(env_vars):
+def show_environment_variables(env_vars):
 
     if len(sys.argv) > 1:
         for arg in sys.argv[1:]:
@@ -12,4 +11,4 @@ def show_Environment_Variables(env_vars):
         print()
 
 if __name__ == "__main__":
-    show_Environment_Variables(sorted(environ.items()))
+    show_environment_variables(sorted(environ.items()))
